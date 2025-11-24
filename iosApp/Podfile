@@ -1,0 +1,12 @@
+platform :ios, '14.0'
+
+target 'iosApp' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'FirebaseCore'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseStorage'
+  pod 'FirebaseDatabase'
+end
