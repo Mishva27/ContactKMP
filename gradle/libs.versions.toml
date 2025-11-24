@@ -11,7 +11,7 @@ androidx-lifecycle = "2.9.5"
 androidx-testExt = "1.3.0"
 composeMultiplatform = "1.9.1"
 junit = "4.13.2"
-kotlin = "2.2.20"
+kotlin = "2.0.21"
 compose-plugin = "1.6.0"
 firebase-bom = "32.7.4"
 firebase-crashlytics-plugin = "2.9.9"
@@ -19,6 +19,9 @@ gservices = "4.4.2"
 firebaseCrashlytics = "20.0.3"
 firebaseFirestoreKtx = "26.0.2"
 firebaseDatabaseKtx = "22.0.1"
+room = "2.8.4"
+sqlite = "2.6.2"
+ksp = "2.0.21-1.0.25"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -36,6 +39,9 @@ firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "fir
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics", version.ref = "firebaseCrashlytics" }
 firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -45,4 +51,5 @@ composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "k
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 gservices = { id = "com.google.gms.google-services", version.ref = "gservices" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics-plugin"}
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+androidx-room = { id = "androidx.room", version.ref = "room" }

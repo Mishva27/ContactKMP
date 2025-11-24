@@ -8,6 +8,8 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.gservices)
     alias(libs.plugins.firebase.crashlytics)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.androidx.room)
 }
 
 kotlin {
@@ -40,6 +42,8 @@ kotlin {
             implementation("com.google.firebase:firebase-firestore-ktx:25.0.0")
             implementation("com.google.firebase:firebase-database-ktx:20.3.0")
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
+            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.9.0-beta03") // Check for the latest version
+
         }
 
         commonMain.dependencies {
@@ -51,6 +55,9 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+
+            implementation(libs.room.runtime)
+            implementation(libs.sqlite.bundled)
         }
 
         commonTest.dependencies {
@@ -93,5 +100,9 @@ android {
 dependencies {
     implementation(libs.firebase.crashlytics)
     debugImplementation(compose.uiTooling)
+    add("kspAndroid", libs.room.compiler)
+}
+room {
+    schemaDirectory("$projectDir/schemas")
 }
 apply(plugin = "com.google.gms.google-services")
