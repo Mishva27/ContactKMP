@@ -39,6 +39,7 @@ kotlin {
             implementation("com.google.firebase:firebase-analytics-ktx:21.4.0")
             implementation("com.google.firebase:firebase-firestore-ktx:25.0.0")
             implementation("com.google.firebase:firebase-database-ktx:20.3.0")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
         }
 
         commonMain.dependencies {
